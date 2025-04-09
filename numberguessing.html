@@ -1,0 +1,88 @@
+ <!DOCTYPE html>
+<html>
+    <body onLoad="f1()">
+        <script>
+function f1()  {
+            const min=90;
+            const max=100;
+            const answer=Math.floor(Math.random()*(max-min+1)) +min;
+            let atempts=0;
+            let guess;
+            let work=true;
+            
+            while(work)
+        {
+          guess=window.prompt("enter the number range is 1 to 100");
+           guess=Number(guess);
+            if(isNaN(guess))
+              {
+                window.alert("enter the valid number");
+
+              }
+                else if(guess < min || guess > max)
+                {
+                    window.alert("enter the valid number");
+                }
+            else{
+                atempts++;
+                if(answer < guess)
+            {
+                window.alert("answer is too low");
+            }
+            else if(answer > guess)
+            {
+                window.alert("answer is too high");
+            }
+            else
+            {console.log(answer);
+                Window.alert(` you guess is CORRECT ANSWER IS ${answer} and attempts is ${atempts}`);
+                work=false;
+            }
+
+            }
+
+        }
+    }
+        </script>
+       
+    </body>
+</html>
+
+<!--
+<!DOCTYPE html>
+<html>
+    <body onload="f1()">
+        <script>
+            function f1() {
+                const min = 1;
+                const max = 100;
+                const answer = Math.floor(Math.random() * (max - min + 1)) + min;
+                let attempts = 0;
+                let guess;
+                let work = true;
+
+                while (work) {
+                    guess = window.prompt("Enter a number (range is 1 to 100):");
+                    guess = Number(guess);
+                    
+                    if (isNaN(guess)) {
+                        window.alert("Please enter a valid number.");
+                    } else if (guess < min || guess > max) {
+                        window.alert("Please enter a number within the range.");
+                    } else {
+                        attempts++;
+                        if (answer < guess) {
+                            window.alert("The answer is lower.");
+                        } else if (answer > guess) {
+                            window.alert("The answer is higher.");
+                        } else {
+                            window.alert(`Correct! The answer is ${answer}. Attempts: ${attempts}`);
+                            work = false;
+                        }
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>-->
+
